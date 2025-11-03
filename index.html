@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elora Egg Timer 🥚</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5d12345678.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>🥚 Elora Egg Timer</h1>
+        <p>Perfect eggs, perfect recipes — every time 🍳</p>
+    </header>
+
+    <main>
+        <section class="timer-container">
+            <div class="egg-display">
+                
+                <audio id="boil-sound" src="https://actions.google.com/sounds/v1/water/boiling_water.ogg" preload="auto"></audio>
+            </div>
+
+            <div class="settings">
+                <label for="egg-type">Choose your egg style:</label>
+                <select id="egg-type">
+                    <option value="240" data-img="https://images.unsplash.com/photo-1617196034796-73bcb57d71c9?auto=format&fit=crop&w=800&q=80">Soft-Boiled (4 min)</option>
+                    <option value="360" data-img="https://images.unsplash.com/photo-1613470206729-d8a5027fa781?auto=format&fit=crop&w=800&q=80">Medium-Soft (6 min)</option>
+                    <option value="480" data-img="https://images.unsplash.com/photo-1617196034988-8d6e8b5b9f6a?auto=format&fit=crop&w=800&q=80">Medium (8 min)</option>
+                    <option value="600" data-img="https://images.unsplash.com/photo-1623855249780-86bfa93a82c4?auto=format&fit=crop&w=800&q=80">Medium-Hard (10 min)</option>
+                    <option value="720" data-img="https://images.unsplash.com/photo-1613470207856-4be8f60e58a0?auto=format&fit=crop&w=800&q=80">Hard-Boiled (12 min)</option>
+                </select>
+
+                <div class="options">
+                    <label><input type="checkbox" id="notify-toggle" checked> Enable Notifications 🔔</label>
+                    <label><input type="checkbox" id="dark-toggle"> Dark Mode 🌙</label>
+                </div>
+
+                <button id="start-btn"><i class="fas fa-egg"></i> Start Cooking</button>
+                <button id="reset-btn" class="hidden"><i class="fas fa-redo"></i> Restart</button>
+            </div>
+
+            <div class="countdown">
+                <h2 id="time-display">00:00</h2>
+                <div class="progress-bar"><div class="progress"></div></div>
+            </div>
+
+            <div id="done-message" class="hidden">
+                <h3>🎉 Your egg is perfectly ready! 🍳</h3>
+                <button id="cook-again"><i class="fas fa-egg"></i> Cook Another</button>
+            </div>
+        </section>
+
+        <section id="recipe-section">
+            <h2>🍽️ Unique Recipes For Your Eggs</h2>
+            <div id="recipe-container">
+                <p>Select your egg style to discover delicious ideas!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Elora Egg Timer | Made with 🧡 & breakfast joy</p>
+    </footer>
+</body>
+</html>

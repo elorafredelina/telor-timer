@@ -1,0 +1,207 @@
+/* === GENERAL STYLES === */
+body {
+    font-family: 'Fredoka One', cursive;
+    background: linear-gradient(135deg, #ffd6e0, #fff2b3, #c4f0ff);
+    color: #333;
+    margin: 0;
+    text-align: center;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* === DARK MODE === */
+body.dark {
+    background: linear-gradient(135deg, #2b2b2b, #3b2f2f, #1b1f2f);
+    color: #f1f1f1;
+}
+
+/* === HEADER === */
+header {
+    background: linear-gradient(90deg, #ff9aa2, #ffb347, #96e6ff);
+    color: white;
+    padding: 25px 0;
+    border-bottom: 6px solid #ff7b54;
+    box-shadow: 0 4px 10px rgba(255, 150, 100, 0.4);
+}
+
+header h1 {
+    font-size: 2.6rem;
+    margin: 0;
+    text-shadow: 1px 2px 4px rgba(255, 255, 255, 0.6);
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #fffdf5;
+}
+
+/* === TIMER CONTAINER === */
+.timer-container {
+    max-width: 550px;
+    margin: 40px auto;
+    background: linear-gradient(180deg, #ffffff, #fff0f7);
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(255, 160, 100, 0.3);
+    padding: 35px;
+    transition: all 0.4s ease;
+}
+
+body.dark .timer-container {
+    background: #2c2c2c;
+}
+
+/* === EGG IMAGE === */
+.egg-display {
+    position: relative;
+}
+
+.egg-image {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+    box-shadow: 0 5px 15px rgba(255, 176, 120, 0.4);
+}
+
+/* === SETTINGS === */
+select {
+    padding: 12px;
+    border-radius: 12px;
+    border: 2px solid #ffb6b9;
+    background: #fffdfd;
+    color: #444;
+    margin: 10px 0;
+    font-size: 1rem;
+    box-shadow: 0 3px 8px rgba(255, 182, 193, 0.3);
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+select:hover {
+    border-color: #ffd700;
+    box-shadow: 0 3px 10px rgba(255, 223, 0, 0.3);
+}
+
+.options {
+    margin-top: 12px;
+    color: #ff7b54;
+    font-size: 0.9rem;
+}
+
+/* === BUTTONS === */
+button {
+    background: linear-gradient(90deg, #ff7eb9, #ffb347, #87cefa);
+    border: none;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 6px;
+    box-shadow: 0 4px 10px rgba(255, 160, 120, 0.4);
+    transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s;
+}
+
+button:hover {
+    transform: scale(1.07);
+    background: linear-gradient(90deg, #ffc1cc, #ffd700, #89cff0);
+    box-shadow: 0 6px 14px rgba(255, 223, 0, 0.4);
+}
+
+.hidden {
+    display: none;
+}
+
+/* === COUNTDOWN TIMER === */
+.countdown h2 {
+    font-size: 3rem;
+    color: #ff6f61;
+    text-shadow: 0 1px 4px rgba(255, 182, 193, 0.5);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 16px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 15px;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #ffb6c1, #ffd700, #87cefa);
+    transition: width 1s linear;
+}
+
+/* === DONE MESSAGE === */
+#done-message {
+    margin-top: 25px;
+    color: #ff7b54;
+    animation: popIn 0.6s ease;
+}
+
+#done-message h3 {
+    color: #ff6f61;
+}
+
+/* === RECIPE SECTION === */
+#recipe-section {
+    max-width: 700px;
+    margin: 40px auto;
+    background: linear-gradient(145deg, #ffeef6, #fff9db, #e3f7ff);
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(255, 150, 150, 0.3);
+    padding: 30px;
+}
+
+body.dark #recipe-section {
+    background: linear-gradient(145deg, #222, #333, #2c2c2c);
+}
+
+#recipe-section h2 {
+    color: #ff6f91;
+    text-shadow: 0 2px 6px rgba(255, 200, 200, 0.4);
+}
+
+.recipe-card {
+    background: #fffdf3;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.3);
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.recipe-card:hover {
+    background: linear-gradient(90deg, #ffedf4, #fff5d6, #e4f6ff);
+    transform: scale(1.03);
+}
+
+/* === FOOTER === */
+footer {
+    padding: 20px;
+    background: linear-gradient(90deg, #ffb6b9, #ffd700, #87cefa);
+    color: white;
+    font-size: 0.9rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* === ANIMATIONS === */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 600px) {
+    header h1 { font-size: 1.9rem; }
+    .timer-container, #recipe-section { padding: 20px; margin: 20px; }
+    button { width: 100%; }
+    .countdown h2 { font-size: 2.5rem; }
+}
